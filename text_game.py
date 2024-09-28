@@ -4,7 +4,7 @@ print(f"hello {name} welcome")
 
 user_input=input("do you want to play (yes/no): ").lower()
 if user_input=="yes":
-    print("you are  at center of forset")
+    print("you are  at center of forest")
 
     direction=input("enter which direction do you want to go(right/left): ").lower()
     if direction=="right":

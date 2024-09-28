@@ -9,7 +9,7 @@ if user_input=="yes":
     direction=input("enter which direction do you want to go(right/left): ").lower()
     if direction=="right":
         print("you see river")
-        choice=input("do you want swim or use boat(swim/boat): ")
+        choice=input("do you want swim or use boat(swim/boat): ").lower()
         if choice=="swim":
           print("eaten by alligator ,you died, try again")
         else:

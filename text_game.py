@@ -17,7 +17,8 @@ if user_input=="yes":
      
     elif direction=="left":
        print("you are eaten by a lion ")
-    
+    else:
+      print("invalid input  game over ")
 
     
     

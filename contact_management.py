@@ -1,7 +1,5 @@
-persons=[]
 
-for i in range(3):
-  print(i+1,"input")
+def add_person():
 
   name=input("enter the name: ")
   while True:
@@ -14,8 +12,28 @@ for i in range(3):
       print("invaild age ")
 
   email=input("enter the email: ")
-  d={"name":name,"age":age,"email":email}
-  persons.append(d)
+  person={"name":name,"age":age,"email":email}
+  return person
+def search_person():
+  pass
+def delete_person():
+  pass
+  
+print("HI WELCOME TO CONTACT MANAGEMENT LIST")
+print()
+people=[]
+
+command=input("You can 'ADD' ,'SEARCH','DELETE', person: ").lower()
+if command=="add":
+  person=add_person()
+  persons.append(person)
+elif command=="search":
+  pass
+elif command=="delete":
+  pass
+else:
+  print("invalid input!!!")
+
 
 
 print(persons)

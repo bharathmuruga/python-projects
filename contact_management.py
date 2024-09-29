@@ -1,8 +1,4 @@
-
-names=[]
-ages=[]
-emails=[]
-
+persons=[]
 
 for i in range(3):
   print(i+1,"input")
@@ -18,8 +14,8 @@ for i in range(3):
       print("invaild age ")
 
   email=input("enter the email: ")
-  names.append(name)
-  ages.append(age)
-  emails.append(email)
+  d={"name":name,"age":age,"email":email}
+  persons.append(d)
 
-print(names,ages,emails)
+
+print(persons)

@@ -1,7 +1,7 @@
-def get_number():
+def get_number(number):
     while True:
       try:
-        num=input("enter the number: ")
+        num=input(f"enter the number{number} : ")
         num=float(num)
         return num
       except:
@@ -18,8 +18,8 @@ def get_sign():
 
 
 def main():
-  num1=get_number()
-  num2=get_number()
+  num1=get_number(1)
+  num2=get_number(2)
   sign=get_sign()
  
   result=0

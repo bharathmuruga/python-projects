@@ -3,10 +3,10 @@ def get_number():
       try:
         num=input("enter the number: ")
         num=float(num)
-        break 
+        return num
       except:
         print("invalid number try ,again")
-    return num
+    
   
 def get_sign():
   while True:

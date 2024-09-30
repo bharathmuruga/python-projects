@@ -1,4 +1,4 @@
-
+import json
 def display(people):
   for i ,person, in enumerate(people):
     print(i+1,"-",person["name"],"|",person["age"],"|",person["email"])
@@ -16,7 +16,7 @@ def add_person():
 
     except :
       print("invaild age ")
-
+  
   email=input("enter the email: ")
   person={"name":name,"age":age,"email":email}
   return person
@@ -51,20 +51,30 @@ def delete_person(people):
     except:
         print("invalid input!!!")
 
+def load_contact():
+  with open("contacts.json","r") as f:
+    people=json.load(f)["contact"]
+    return people
+
+def save_contact(people):
+  with open("contacts.json","w") as f:
+    return json.dump({"contact":people},f,indent=4)
   
 print("HI WELCOME TO CONTACT MANAGEMENT LIST")
 print()
-people=[]
 
 
+people=load_contact()
 
 def main():
+  
   while True:
     command=input("You can 'ADD' ,'SEARCH','DELETE' and 'Q' for quit: ").lower()
     if command=="add":
       person=add_person()
       people.append(person)
       print("person add successfully")
+      save_contact(people)
       total_contact(people)
     elif command=="search":
       search_person(people)
@@ -76,6 +86,7 @@ def main():
       break
     else:
       print("invalid input!!!")
+
 
 
 if __name__=="__main__":
